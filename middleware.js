@@ -1,5 +1,7 @@
 'use strict';
 
+const _ = require('lodash');
+
 const mw = {
   formatQuery: require('warepot/format-query'),
   paginate: require('warepot/paginate')
