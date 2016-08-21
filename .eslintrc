@@ -36,16 +36,15 @@
     "strict": [ 2, "global" ]
   },
 
-  globals: {
-    "$": true,
-    "_": true,
+  "env": {
+    "node": true
+  },
+
+  "globals": {
     "ENV": true,
-    "google": true,
-    "INITIAL_STATE": true,
     "INITIAL_CONTEXT": true,
+    "INITIAL_STATE": true,
     "LOGIN_USER": true,
-    "PWD": true,
-    "FB": true,
-    "Backbone": true
+    "PWD": true
   }
 }
