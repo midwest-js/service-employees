@@ -1,8 +1,8 @@
-'use strict';
+'use strict'
 
-const isAuthenticated = require('express-module-membership/passport/authorization-middleware').isAuthenticated;
+const isAuthenticated = require('express-module-membership/passport/authorization-middleware').isAuthenticated
 
-const mw = require('./middleware');
+const mw = require('./middleware')
 
 module.exports = [
   [ '/api/employees/', 'get', [ mw.formatQuery, mw.paginate, mw.find ]],
@@ -11,4 +11,4 @@ module.exports = [
   [ '/api/employees/:id', 'put', [ isAuthenticated, mw.put ]],
   [ '/api/employees/:id', 'patch', [ isAuthenticated, mw.patch ]],
   [ '/api/employees/:id', 'delete', [ isAuthenticated, mw.remove ]]
-];
+]
