@@ -1,6 +1,6 @@
 {
-  "name": "express-service-employees",
-  "version": "0.1.0",
+  "name": "midwest-service-employees",
+  "version": "0.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -8,16 +8,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/thecodebureau/express-service-employees.git"
+    "url": "git+https://github.com/thebitmill/midwest-service-employees.git"
   },
   "keywords": [
-    "Express",
-    "MongoDB"
+    "cms",
+    "midwest",
+    "express",
+    "mongodb"
   ],
   "author": "Linus Miller <lohfu@lohfu.io> (https://lohfu.io/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/thecodebureau/express-service-employees/issues"
+    "url": "https://github.com/thebitmill/midwest-service-employees/issues"
   },
-  "homepage": "https://github.com/thecodebureau/express-service-employees#readme"
+  "homepage": "https://github.com/thebitmill/midwest-service-employees#readme"
 }
