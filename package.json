@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/thebitmill/midwest-service-employees/issues"
   },
-  "homepage": "https://github.com/thebitmill/midwest-service-employees#readme"
+  "homepage": "https://github.com/thebitmill/midwest-service-employees#readme",
+  "dependencies": {
+    "midwest": "0.0.2"
+  }
 }

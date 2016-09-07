@@ -3,8 +3,8 @@
 const _ = require('lodash')
 
 const mw = {
-  formatQuery: require('warepot/format-query'),
-  paginate: require('warepot/paginate')
+  formatQuery: require('midwest/middleware/format-query'),
+  paginate: require('midwest/middleware/paginate')
 }
 
 const mongoose = require('mongoose')
