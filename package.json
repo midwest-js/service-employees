@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint *.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublish": "npm run lint",
+    "preversion": "npm run lint"
   },
   "repository": {
     "type": "git",
@@ -23,6 +26,13 @@
   },
   "homepage": "https://github.com/thebitmill/midwest-service-employees#readme",
   "dependencies": {
-    "midwest": "0.0.2"
+    "express": "^4.14.0",
+    "lodash": "^4.16.4",
+    "midwest": "^0.1.1",
+    "mongopot": "0.0.2"
+  },
+  "devDependencies": {
+    "eslint": "^3.8.1",
+    "eslint-config-airbnb-base": "^9.0.0"
   }
 }
