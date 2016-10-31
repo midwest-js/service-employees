@@ -1,11 +1,8 @@
 'use strict';
 
-const rest = require('midwest/middleware/rest');
-
-const mw = {
-  formatQuery: require('midwest/middleware/format-query'),
-  paginate: require('midwest/middleware/paginate'),
-};
+const rest = require('midwest/factories/rest');
+const formatQuery = require('midwest/factories/format-query');
+const paginate = require('midwest/factories/paginate');
 
 const Employee = require('./model');
 
@@ -20,6 +17,6 @@ function getPublished(req, res, next) {
 
 module.exports = Object.assign(rest(Employee), {
   getPublished,
-  formatQuery: mw.formatQuery(['page', 'limit', 'sort']),
-  paginate: mw.paginate(Employee, 10),
+  formatQuery: formatQuery(['page', 'limit', 'sort']),
+  paginate: paginate(Employee, 10),
 });
