@@ -14,6 +14,7 @@
     "consistent-return": 0,
     "func-names": 0,
     "global-require": 0,
+    "import/no-dynamic-require": 0,
     "import/no-extraneous-dependencies": 0,
     "import/no-unresolved": [2, { "ignore": ["^[^./]"] }],
     "no-console": [1, { "allow": ["warn", "error", "info"] }],
