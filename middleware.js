@@ -4,19 +4,23 @@ const rest = require('midwest/factories/rest');
 const formatQuery = require('midwest/factories/format-query');
 const paginate = require('midwest/factories/paginate');
 
-const Employee = require('./model');
+const handlers = require('./handlers');
 
-function getPublished(req, res, next) {
-  Employee.find({ datePublished: { $ne: null } }, (err, employees) => {
-    if (err) return next(err);
+const mw = rest({
+  plural: 'employees',
+  handlers,
+});
 
-    res.locals.employees = employees;
-    next();
+function create(req, res, next) {
+  Object.assign(req.body, {
+    createdById: req.user.id,
   });
+
+  mw.create(req, res, next);
 }
 
-module.exports = Object.assign(rest(Employee), {
-  getPublished,
+module.exports = Object.assign({}, mw, {
+  create,
   formatQuery: formatQuery(['page', 'limit', 'sort']),
-  paginate: paginate(Employee, 10),
+  paginate: paginate(handlers.count, 20),
 });
