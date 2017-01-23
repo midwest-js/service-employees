@@ -27,12 +27,11 @@
   "homepage": "https://github.com/thebitmill/midwest-service-employees#readme",
   "dependencies": {
     "express": "^4.14.0",
-    "lodash": "^4.16.5",
-    "midwest": "^0.2.0",
-    "mongopot": "0.0.2"
+    "lodash": "^4.17.4",
+    "midwest": "^0.4.0"
   },
   "devDependencies": {
-    "eslint": "^3.9.0",
-    "eslint-config-airbnb-base": "^9.0.0"
+    "eslint": "^3.14.0",
+    "eslint-config-airbnb-base": "^11.0.1"
   }
 }
