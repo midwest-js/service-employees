@@ -3,7 +3,19 @@
 // modules > midwest
 const factory = require('midwest/factories/handlers');
 
-const columns = ['id', 'givenName', 'familyName', 'telephone', 'email', 'jobTitle', 'image', 'dateCreated', 'createdById', 'dateModified'];
+const columns = [
+  'id',
+  'givenName',
+  'familyName',
+  'telephone',
+  'email',
+  'jobTitle',
+  'description',
+  'dateCreated',
+  'createdById',
+  'dateModified',
+  'modifiedById',
+];
 
 const config = require('./config');
 
