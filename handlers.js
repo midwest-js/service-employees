@@ -15,9 +15,9 @@ const columns = [
   'email',
   'jobTitle',
   'description',
-  'dateCreated',
+  'createdAt',
   'createdById',
-  'dateModified',
+  'modifiedAt',
   'modifiedById',
 ];
 
@@ -30,4 +30,4 @@ module.exports = _.memoize((config) => {
   });
 
   return handlers;
-}, resolveCache());
+}, resolveCache);
