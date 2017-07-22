@@ -1,14 +1,14 @@
-'use strict';
+'use strict'
 
 // modules > 3rd party
-const _ = require('lodash');
+const _ = require('lodash')
 
-const sql = require('easy-postgres/sql-helpers');
-const { many } = require('easy-postgres/result');
+const sql = require('easy-postgres/sql-helpers')
+const { many } = require('easy-postgres/result')
 
 // modules > midwest
-const factory = require('midwest/factories/rest-handlers');
-const resolver = require('deep-equal-resolver')();
+const factory = require('midwest/factories/rest-handlers')
+const resolver = require('deep-equal-resolver')()
 
 const columns = [
   'id',
@@ -22,15 +22,15 @@ const columns = [
   'createdById',
   'modifiedAt',
   'modifiedById',
-];
+]
 
-const columnsString = sql.columns(columns);
+const columnsString = sql.columns(columns)
 
 module.exports = _.memoize((config) => {
-  function getAll(client = config.db) {
-    const query = `SELECT ${columnsString} FROM employees ORDER BY id ASC;`;
+  function getAll (client = config.db) {
+    const query = `SELECT ${columnsString} FROM employees ORDER BY id ASC;`
 
-    return client.query(query).then(many);
+    return client.query(query).then(many)
   }
 
   const handlers = factory({
@@ -39,7 +39,7 @@ module.exports = _.memoize((config) => {
     exclude: ['getAll'],
     table: 'employees',
     columns,
-  });
+  })
 
-  return Object.assign(handlers, { getAll });
-}, resolver);
+  return Object.assign(handlers, { getAll })
+}, resolver)

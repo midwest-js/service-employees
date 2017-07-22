@@ -1,23 +1,23 @@
-'use strict';
+'use strict'
 
-const _ = require('lodash');
-const express = require('express');
-const resolver = require('deep-equal-resolver')();
+const _ = require('lodash')
+const express = require('express')
+const resolver = require('deep-equal-resolver')()
 
 module.exports = _.memoize((config) => {
-  const router = new express.Router();
+  const router = new express.Router()
 
-  const mw = require('./middleware')(config);
+  const mw = require('./middleware')(config)
 
   router.route('/')
     .get(mw.formatQuery, mw.paginate, mw.find)
-    .post(mw.create);
+    .post(mw.create)
 
   router.route('/:id')
     .get(mw.findById)
     .patch(mw.update)
     .put(mw.replace)
-    .delete(mw.remove);
+    .delete(mw.remove)
 
-  return router;
-}, resolver);
+  return router
+}, resolver)
