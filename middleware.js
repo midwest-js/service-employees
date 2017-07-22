@@ -4,7 +4,7 @@ const _ = require('lodash');
 const rest = require('midwest/factories/rest-middleware');
 const formatQuery = require('midwest/factories/format-query');
 const paginate = require('midwest/factories/paginate');
-const resolveCache = require('./resolve-cache');
+const resolver = require('deep-equal-resolver')();
 
 module.exports = _.memoize((config) => {
   const handlers = require('./handlers')(config);
@@ -29,4 +29,4 @@ module.exports = _.memoize((config) => {
     formatQuery: formatQuery(['page', 'limit', 'sort']),
     paginate: paginate(handlers.count, 20),
   });
-}, resolveCache);
+}, resolver);

@@ -1,10 +1,10 @@
 'use strict';
 
 const _ = require('lodash');
-const resolveCache = require('./resolve-cache');
+const resolver = require('deep-equal-resolver')();
 
 module.exports = _.memoize((config) => ({
   router: require('./router')(config),
   middleware: require('./middleware')(config),
   handlers: require('./handlers')(config),
-}), resolveCache);
+}), resolver);
