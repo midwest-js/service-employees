@@ -7,7 +7,7 @@ const sql = require('easy-postgres/sql-helpers');
 const { many } = require('easy-postgres/result');
 
 // modules > midwest
-const factory = require('midwest/factories/handlers');
+const factory = require('midwest/factories/rest-handlers');
 const resolveCache = require('./resolve-cache');
 
 const columns = [
