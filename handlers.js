@@ -3,11 +3,11 @@
 // modules > 3rd party
 const _ = require('lodash')
 
+const factory = require('@bmp/pg/handlers')
 const sql = require('@bmp/pg/sql-helpers')
 const { many } = require('@bmp/pg/result')
 
 // modules > midwest
-const factory = require('midwest/factories/rest-handlers')
 const resolver = require('deep-equal-resolver')()
 
 const columns = [
